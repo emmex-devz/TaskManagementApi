@@ -1,0 +1,33 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@baseUrl = https://localhost:7145
+
+### CREATE TASK
+POST {{baseUrl}}/api/Tasks
+Content-Type: application/json
+
+{
+    "title": "Build My First Backend API",
+    "description": "Develop a task management system using ASP.NET Core",
+    "isCompleted": false
+}
+
+### GET ALL TASKS
+GET {{baseUrl}}/api/Tasks
+
+### GET TASK BY ID
+GET {{baseUrl}}/api/Tasks/1
+
+### UPDATE TASK
+PUT {{baseUrl}}/api/Tasks/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "title": "Build My First Backend API",
+    "description": "Successfully developed and tested my API",
+    "isCompleted": true
+}
+
+### DELETE TASK
+DELETE {{baseUrl}}/api/Tasks/1
