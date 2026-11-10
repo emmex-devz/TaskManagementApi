@@ -25,6 +25,11 @@ standard HTTP operations.
 - Database persistence
 - Input validation
 - HTTP status code handling
+- Filter tasks by completion status
+- Search tasks by title
+- Sort tasks by creation date
+- Paginate task results
+- API documentation using Swagger
 
 ## API Endpoints
 
@@ -41,12 +46,15 @@ standard HTTP operations.
 1. Clone the repository.
 2. Open the solution in Visual Studio.
 3. Restore NuGet packages.
-4. Build the solution.
-5. Run the application.
-6. Test endpoints using Tasks.http.
+4. Run `Update-Database` in Package Manager Console.
+5. Build and run the application.
+6. Open `/swagger` to test the API.
 
 ## Database
 
 SQLite is used for data persistence.
-The database is automatically created when
-the application starts.
+Entity Framework Core migrations manage database
+creation and schema updates.
+
+Run `Update-Database` in the Package Manager
+Console to apply the migrations.
